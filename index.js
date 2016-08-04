@@ -15,6 +15,5 @@ app.get('/',function(req, res) {
 });
 
 app.use(function(req, res){
-	res.write("error");
-	res.end();
+	res.end("error");
 });
