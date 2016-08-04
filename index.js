@@ -14,6 +14,12 @@ app.get('/',function(req, res) {
 
 });
 
+app.get('/other',function(req, res) {
+	
+	res.sendFile(__dirname + '/web/other.html' , 'UTF-8');
+
+});
+
 app.use(function(req, res){
-	res.end("error");
+	res.send(404);
 });
