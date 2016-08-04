@@ -13,7 +13,7 @@ function showPosition(position) {
     "<br>Longitude: " + position.coords.longitude; 
 }
 
-function fsdfsd(Latitude,Longitude){
+function GPS2Address(Latitude,Longitude){
 
 	var location_api_str = 'http://maps.google.com/maps/api/geocode/json?latlng=' + Latitude + ',' + Longitude + '&language=zh-TW&sensor=true';
 	
