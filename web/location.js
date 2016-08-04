@@ -13,5 +13,16 @@ function showPosition(position) {
     "<br>Longitude: " + position.coords.longitude; 
 }
 
-var location_api_str = 'http://maps.google.com/maps/api/geocode/json?latlng=' + Latitude + ',' + Longitude + '&language=zh-TW&sensor=true';
+function fsdfsd(Latitude,Longitude){
 
+	var location_api_str = 'http://maps.google.com/maps/api/geocode/json?latlng=' + Latitude + ',' + Longitude + '&language=zh-TW&sensor=true';
+	
+	//code 
+	var request = require('request');
+	var address;
+	request(location_api_str,function(err, res, body) {
+		body = JSON.parse(body);
+		address = body.results[0].address_components[5].long_name + ", " + body.results[0].address_components[4].long_name + ", " + body.results[0].address_components[3].long_name;
+		return address;
+	})
+}
