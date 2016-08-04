@@ -21,5 +21,5 @@ app.get('/other',function(req, res) {
 });
 
 app.use(function(req, res){
-	res.send(404);
+	res.rediect('/web/');
 });
