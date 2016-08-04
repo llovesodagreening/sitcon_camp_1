@@ -8,5 +8,5 @@ app.listen (8001, function(err){
 });
 
 app.get('/',function(req, res) {
-	res.sendFile(__dirname + 'web/index.html' , 'UTF-8');
+	res.sendFile(__dirname + '/web/index.html' , 'UTF-8');
 });
